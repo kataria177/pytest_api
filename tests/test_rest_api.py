@@ -10,24 +10,7 @@ def api_client():
     """Fixture to initialize API client."""
     return APIClient()
 
-
-def test_post_and_validate(api_client):
-    """Test to send a POST request and validate with a GET request."""
-    # Payload for POST request
-    post_payload = {
-    "name": "morpheus",
-    "job": "leader"
-    }
-
-import pytest
-from pages.api_client import APIClient
-
-@pytest.fixture
-def api_client():
-    """Fixture to initialize API client."""
-    return APIClient()
-
-
+@pytest.mark.smoke
 def test_post_and_validate(api_client):
     """Test to send a POST request and validate the data with a GET request."""
     # Payload for POST request
